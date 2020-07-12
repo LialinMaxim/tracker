@@ -1,0 +1,1400 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "accounts",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "data",
+    "model": "checkresults"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "data",
+    "model": "schemadefinitions"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "data",
+    "model": "notification"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "django_rest_passwordreset",
+    "model": "resetpasswordtoken"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "inspections",
+    "model": "cluster"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "inspections",
+    "model": "inspectiontype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "inspections",
+    "model": "inspection"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "inspections",
+    "model": "operator"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "inspections",
+    "model": "status"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "inspections",
+    "model": "deck"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "decks",
+    "model": "cluster"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "decks",
+    "model": "clustertype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "decks",
+    "model": "operator"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "decks",
+    "model": "deck"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "inspections",
+    "model": "report"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "accounts",
+    "model": "permissionaction"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "accounts",
+    "model": "permissiongroup"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "accounts",
+    "model": "grouplevel"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 6,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 6,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 6,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 6,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add check results",
+    "content_type": 7,
+    "codename": "add_checkresults"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change check results",
+    "content_type": 7,
+    "codename": "change_checkresults"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete check results",
+    "content_type": 7,
+    "codename": "delete_checkresults"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view check results",
+    "content_type": 7,
+    "codename": "view_checkresults"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add schema definitions",
+    "content_type": 8,
+    "codename": "add_schemadefinitions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change schema definitions",
+    "content_type": 8,
+    "codename": "change_schemadefinitions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete schema definitions",
+    "content_type": 8,
+    "codename": "delete_schemadefinitions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view schema definitions",
+    "content_type": 8,
+    "codename": "view_schemadefinitions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add notification",
+    "content_type": 9,
+    "codename": "add_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change notification",
+    "content_type": 9,
+    "codename": "change_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete notification",
+    "content_type": 9,
+    "codename": "delete_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view notification",
+    "content_type": 9,
+    "codename": "view_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add Password Reset Token",
+    "content_type": 10,
+    "codename": "add_resetpasswordtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change Password Reset Token",
+    "content_type": 10,
+    "codename": "change_resetpasswordtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete Password Reset Token",
+    "content_type": 10,
+    "codename": "delete_resetpasswordtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view Password Reset Token",
+    "content_type": 10,
+    "codename": "view_resetpasswordtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add cluster",
+    "content_type": 11,
+    "codename": "add_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change cluster",
+    "content_type": 11,
+    "codename": "change_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete cluster",
+    "content_type": 11,
+    "codename": "delete_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view cluster",
+    "content_type": 11,
+    "codename": "view_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add type",
+    "content_type": 12,
+    "codename": "add_type"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change type",
+    "content_type": 12,
+    "codename": "change_type"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete type",
+    "content_type": 12,
+    "codename": "delete_type"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view type",
+    "content_type": 12,
+    "codename": "view_type"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add inspection",
+    "content_type": 13,
+    "codename": "add_inspection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change inspection",
+    "content_type": 13,
+    "codename": "change_inspection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete inspection",
+    "content_type": 13,
+    "codename": "delete_inspection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view inspection",
+    "content_type": 13,
+    "codename": "view_inspection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add operator",
+    "content_type": 14,
+    "codename": "add_operator"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change operator",
+    "content_type": 14,
+    "codename": "change_operator"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete operator",
+    "content_type": 14,
+    "codename": "delete_operator"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view operator",
+    "content_type": 14,
+    "codename": "view_operator"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add status",
+    "content_type": 15,
+    "codename": "add_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change status",
+    "content_type": 15,
+    "codename": "change_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete status",
+    "content_type": 15,
+    "codename": "delete_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view status",
+    "content_type": 15,
+    "codename": "view_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add deck",
+    "content_type": 16,
+    "codename": "add_deck"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change deck",
+    "content_type": 16,
+    "codename": "change_deck"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete deck",
+    "content_type": 16,
+    "codename": "delete_deck"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view deck",
+    "content_type": 16,
+    "codename": "view_deck"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add cluster",
+    "content_type": 17,
+    "codename": "add_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change cluster",
+    "content_type": 17,
+    "codename": "change_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete cluster",
+    "content_type": 17,
+    "codename": "delete_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view cluster",
+    "content_type": 17,
+    "codename": "view_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add cluster type",
+    "content_type": 18,
+    "codename": "add_clustertype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change cluster type",
+    "content_type": 18,
+    "codename": "change_clustertype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete cluster type",
+    "content_type": 18,
+    "codename": "delete_clustertype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view cluster type",
+    "content_type": 18,
+    "codename": "view_clustertype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add operator",
+    "content_type": 19,
+    "codename": "add_operator"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change operator",
+    "content_type": 19,
+    "codename": "change_operator"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete operator",
+    "content_type": 19,
+    "codename": "delete_operator"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view operator",
+    "content_type": 19,
+    "codename": "view_operator"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add deck",
+    "content_type": 20,
+    "codename": "add_deck"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change deck",
+    "content_type": 20,
+    "codename": "change_deck"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete deck",
+    "content_type": 20,
+    "codename": "delete_deck"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view deck",
+    "content_type": 20,
+    "codename": "view_deck"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add inspection type",
+    "content_type": 12,
+    "codename": "add_inspectiontype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change inspection type",
+    "content_type": 12,
+    "codename": "change_inspectiontype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete inspection type",
+    "content_type": 12,
+    "codename": "delete_inspectiontype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view inspection type",
+    "content_type": 12,
+    "codename": "view_inspectiontype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add report",
+    "content_type": 21,
+    "codename": "add_report"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change report",
+    "content_type": 21,
+    "codename": "change_report"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete report",
+    "content_type": 21,
+    "codename": "delete_report"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view report",
+    "content_type": 21,
+    "codename": "view_report"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add permission action",
+    "content_type": 22,
+    "codename": "add_permissionaction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change permission action",
+    "content_type": 22,
+    "codename": "change_permissionaction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete permission action",
+    "content_type": 22,
+    "codename": "delete_permissionaction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view permission action",
+    "content_type": 22,
+    "codename": "view_permissionaction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can add permission group",
+    "content_type": 23,
+    "codename": "add_permissiongroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can change permission group",
+    "content_type": 23,
+    "codename": "change_permissiongroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can delete permission group",
+    "content_type": 23,
+    "codename": "delete_permissiongroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can view permission group",
+    "content_type": 23,
+    "codename": "view_permissiongroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 97,
+  "fields": {
+    "name": "Can add group level",
+    "content_type": 24,
+    "codename": "add_grouplevel"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 98,
+  "fields": {
+    "name": "Can change group level",
+    "content_type": 24,
+    "codename": "change_grouplevel"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 99,
+  "fields": {
+    "name": "Can delete group level",
+    "content_type": 24,
+    "codename": "delete_grouplevel"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 100,
+  "fields": {
+    "name": "Can view group level",
+    "content_type": 24,
+    "codename": "view_grouplevel"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Admin",
+    "permissions": [
+      97,
+      98,
+      99,
+      100,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      21,
+      22,
+      23,
+      24,
+      9,
+      10,
+      11,
+      12,
+      5,
+      6,
+      7,
+      8,
+      25,
+      26,
+      27,
+      28,
+      33,
+      34,
+      35,
+      36,
+      29,
+      30,
+      31,
+      32,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      77,
+      78,
+      79,
+      80,
+      73,
+      74,
+      75,
+      76,
+      41,
+      42,
+      43,
+      44,
+      61,
+      62,
+      63,
+      64,
+      49,
+      50,
+      51,
+      52,
+      81,
+      45,
+      82,
+      46,
+      83,
+      47,
+      84,
+      48,
+      53,
+      54,
+      55,
+      56,
+      85,
+      86,
+      87,
+      88,
+      57,
+      58,
+      59,
+      60
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Director",
+    "permissions": [
+      92,
+      96,
+      21,
+      22,
+      23,
+      24,
+      12,
+      8,
+      28,
+      33,
+      34,
+      35,
+      36,
+      32,
+      65,
+      66,
+      67,
+      68,
+      72,
+      77,
+      78,
+      79,
+      80,
+      73,
+      74,
+      75,
+      76,
+      41,
+      42,
+      43,
+      44,
+      61,
+      62,
+      63,
+      64,
+      49,
+      50,
+      51,
+      52,
+      84,
+      48,
+      53,
+      54,
+      55,
+      56,
+      85,
+      86,
+      87,
+      88,
+      60
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 3,
+  "fields": {
+    "name": "Manager",
+    "permissions": [
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      21,
+      22,
+      23,
+      24,
+      9,
+      10,
+      11,
+      12,
+      5,
+      6,
+      7,
+      8,
+      25,
+      26,
+      27,
+      28,
+      33,
+      34,
+      35,
+      36,
+      29,
+      30,
+      31,
+      32,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      77,
+      78,
+      79,
+      80,
+      73,
+      74,
+      75,
+      76,
+      41,
+      42,
+      43,
+      44,
+      61,
+      62,
+      63,
+      64,
+      49,
+      50,
+      51,
+      52,
+      81,
+      45,
+      82,
+      46,
+      83,
+      47,
+      84,
+      48,
+      53,
+      54,
+      55,
+      56,
+      85,
+      86,
+      87,
+      88,
+      57,
+      58,
+      59,
+      60
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 4,
+  "fields": {
+    "name": "Inspector",
+    "permissions": [
+      92,
+      96,
+      24,
+      12,
+      8,
+      28,
+      36,
+      32,
+      65,
+      66,
+      68,
+      72,
+      80,
+      76,
+      44,
+      64,
+      52,
+      84,
+      48,
+      56,
+      85,
+      86,
+      88,
+      60
+    ]
+  }
+},
+{
+  "model": "accounts.grouplevel",
+  "pk": 1,
+  "fields": {
+    "level": 40,
+    "group": 1
+  }
+},
+{
+  "model": "accounts.grouplevel",
+  "pk": 2,
+  "fields": {
+    "level": 30,
+    "group": 2
+  }
+},
+{
+  "model": "accounts.grouplevel",
+  "pk": 3,
+  "fields": {
+    "level": 10,
+    "group": 4
+  }
+},
+{
+  "model": "accounts.grouplevel",
+  "pk": 4,
+  "fields": {
+    "level": 20,
+    "group": 3
+  }
+}
+]

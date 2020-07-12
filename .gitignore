@@ -1,0 +1,12 @@
+idea/
+.idea/
+*.pyc
+__pycache__/
+
+.mypy_cache
+.vscode
+
+env/
+venv/
+
+media/

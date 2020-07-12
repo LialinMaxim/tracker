@@ -1,0 +1,1407 @@
+[
+{
+  "model": "inspections.status",
+  "pk": 1,
+  "fields": {
+    "title": "Scheduled",
+    "updated": "2020-01-10T12:50:32.331Z"
+  }
+},
+{
+  "model": "inspections.status",
+  "pk": 2,
+  "fields": {
+    "title": "Assigned",
+    "updated": "2020-01-10T12:50:42.920Z"
+  }
+},
+{
+  "model": "inspections.status",
+  "pk": 3,
+  "fields": {
+    "title": "In Progress",
+    "updated": "2020-01-10T12:51:06.577Z"
+  }
+},
+{
+  "model": "inspections.status",
+  "pk": 4,
+  "fields": {
+    "title": "Completed",
+    "updated": "2020-01-10T12:51:16.151Z"
+  }
+},
+{
+  "model": "inspections.inspectiontype",
+  "pk": 1,
+  "fields": {
+    "title": "Fitness",
+    "updated": "2020-02-17T09:33:10.325Z",
+    "schema": {
+      "title": "Helideck Fitness Report",
+      "schema": "http://json-schema.org/draft-07/schema#",
+      "properties": {
+        "6_crew": {
+          "type": "object",
+          "title": "6. Crew",
+          "properties": {
+            "6_1_HLO": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "HLO",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "HLO compliant."
+            },
+            "6_2_HDA": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "HDA",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "HDA compliant."
+            },
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "6_3_fireman": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Fireman",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Fireman compliant."
+            },
+            "6_4_heli_admin": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Heli Admin",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Heli Admin compliant."
+            }
+          },
+          "description": "Helideck crew.",
+          "additionalProperties": false
+        },
+        "3_lighting": {
+          "type": "object",
+          "title": "3. Lighting",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "3_2_flood": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Flood",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Flood."
+            },
+            "3_5_status": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Status",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Status lighting."
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "3_3_general": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "General",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "General lighting all working with no pilot dazzle."
+            },
+            "3_1_perimeter": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Perimeter",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Perimeter lighting."
+            },
+            "3_4_obstruction": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Obstruction",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Obstruction lighting."
+            }
+          },
+          "description": "Helideck lighting.",
+          "additionalProperties": false
+        },
+        "2_perimeter_net": {
+          "type": "object",
+          "title": "2. Perimeter Net",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "2_1_material": {
+              "enum": {
+                "$ref": "#definitions/enums/perimeter_net"
+              },
+              "type": "string",
+              "title": "Material",
+              "control": {
+                "$ref": "#definitions/controls/select"
+              },
+              "description": "Type of perimeter net material."
+            },
+            "2_2_condition": {
+              "enum": {
+                "$ref": "#definitions/enums/condition"
+              },
+              "type": "string",
+              "title": "Condition",
+              "control": {
+                "$ref": "#definitions/controls/select"
+              },
+              "description": "Condition of perimeter net."
+            },
+            "2_3_last_test_result_date": {
+              "type": "string",
+              "title": "Last Test Result Date",
+              "control": {
+                "$ref": "#definitions/controls/date"
+              },
+              "description": "Last test result date."
+            }
+          },
+          "description": "Perimeter Net.",
+          "additionalProperties": false
+        },
+        "8_documentation": {
+          "type": "object",
+          "title": "8. Documentation",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "8_1_cap437_manual": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "CAP 437",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "CAP 437 available."
+            },
+            "8_3_icao_annex_14": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "ICAO Annex 14 Vol II",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "ICAO Annex 14 - Aerodromes - Volume II - Heliports available."
+            },
+            "8_5_operations_manual": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Operations Manual",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Operations manual available."
+            },
+            "8_4_icao_iata_dg_regulations": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "IATA DGR",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "IATA Dangerous Goods regulations available."
+            },
+            "8_6_passenger_briefing_video": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Passenger Briefing Video",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Passenger briefing video available."
+            },
+            "8_2_helicopter_procedures_manual": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Helicopter Procedures Manual",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Helicopter procedures manual available."
+            }
+          },
+          "description": "Documentation.",
+          "additionalProperties": false
+        },
+        "1_helideck_surface": {
+          "type": "object",
+          "title": "1. Helideck Surface",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "1_1_colour": {
+              "enum": {
+                "$ref": "#definitions/enums/surface"
+              },
+              "type": "string",
+              "title": "Colour",
+              "control": {
+                "$ref": "#definitions/controls/select"
+              },
+              "description": "The helideck surface colour."
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "1_2_condition": {
+              "enum": {
+                "$ref": "#definitions/enums/condition"
+              },
+              "type": "string",
+              "title": "Condition",
+              "control": {
+                "$ref": "#definitions/controls/select"
+              },
+              "description": "General condition of the helideck surface."
+            },
+            "1_4_last_friction_test_date": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Last friction test",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Date valididity of last friction test."
+            },
+            "1_3_non_slip_characteristics": {
+              "enum": {
+                "$ref": "#definitions/enums/characteristic"
+              },
+              "type": "string",
+              "title": "Non-slip characteristics",
+              "control": {
+                "$ref": "#definitions/controls/select"
+              },
+              "description": "Helideck should be kept free from oil, grease, ice, snow, excessive surface water, or any other contaminant degrading the surface friction."
+            },
+            "1_5_gutter_or_raised_curb_clear": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "title": "Gutter or raised curb clear",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Gutter around the entire perimeter, clear of all debris."
+            }
+          },
+          "description": "Reference CAP 437.",
+          "additionalProperties": false
+        },
+        "5_helideck_equipment": {
+          "type": "object",
+          "title": "5. Helideck Equipment",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "5_7_windsock": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Windsock compliance",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Protective clothing compliance."
+            },
+            "5_1_chocks_type": {
+              "enum": {
+                "$ref": "#definitions/enums/chocks_material"
+              },
+              "type": "string",
+              "title": "Chocks type",
+              "control": {
+                "$ref": "#definitions/controls/select"
+              },
+              "description": "You can only identify one type of chocks, so pick the majority."
+            },
+            "5_3_tiedown_straps": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Tiedown straps",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Tiedown straps compliance."
+            },
+            "5_1_chocks_quantity": {
+              "type": "number",
+              "title": "Chocks quantity",
+              "control": {
+                "$ref": "#definitions/controls/number_counter"
+              },
+              "description": "The total number of chocks."
+            },
+            "5_7_windsock_lighting": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Windsock lighting",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Windsock lighting is working."
+            },
+            "5_7_windsock_location": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Windsock location",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Windsock location is acceptable."
+            },
+            "5_7_windsock_condition": {
+              "enum": {
+                "$ref": "#definitions/enums/condition"
+              },
+              "type": "string",
+              "title": "Windsock condition",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "General condition of the windsock."
+            },
+            "5_6_protective_clothing": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Protective clothing",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Protective clothing compliance."
+            },
+            "5_8_fuelling_facilities": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Fuelling facilities",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "General condition of the fuelling facilities."
+            },
+            "5_4_scales_baggage_freight": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Scales",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Scales for baggage and freight."
+            },
+            "5_3_tiedown_straps_quantity": {
+              "type": "number",
+              "title": "Tiedown straps quantity",
+              "control": {
+                "$ref": "#definitions/controls/number_counter"
+              },
+              "description": "Tiedown straps quantity."
+            },
+            "5_2_prohibited_landing_marker": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Prohibited landing marker",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Prohibited landing marker \u2013 4X4m flag."
+            },
+            "5_6_protective_clothing_location": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Protective clothing location",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "The location where the clothing is stored."
+            },
+            "5_5_rescue_equipment_box_location": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Rescue equipment box location",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Condition of the rescue equipment box."
+            },
+            "5_5_rescue_equipment_box_checklist": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Rescue equipment box checklist",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Contents according to the checklist of the rescue equipment box."
+            },
+            "5_5_rescue_equipment_box_condition": {
+              "enum": {
+                "$ref": "#definitions/enums/condition"
+              },
+              "type": "string",
+              "title": "Rescue equipment box condition",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Condition of the rescue equipment box."
+            },
+            "5_6_protective_clothing_hlo_identifiable": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "HLO identifiable",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Verify the HLO is identifiable."
+            }
+          },
+          "description": "Reference CAP 437.",
+          "additionalProperties": false
+        },
+        "4_firefighting_equipment": {
+          "type": "object",
+          "title": "4. Firefighting Equipment",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "4_1_fixed_monitors": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Fixed monitors",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Fixed monitors."
+            },
+            "4_2_foam_certificate_date": {
+              "type": "string",
+              "title": "Foam Certificate Date",
+              "control": {
+                "$ref": "#definitions/controls/date"
+              },
+              "description": "Foam Certificate Date."
+            },
+            "4_3_extinguishers_service_date": {
+              "type": "string",
+              "title": "Extinguishers Service Date",
+              "control": {
+                "$ref": "#definitions/controls/date"
+              },
+              "description": "Service date of AFF/DP/CO2 extinguishers."
+            }
+          },
+          "description": "Firefighting equipment.",
+          "additionalProperties": false
+        },
+        "7_meteorological_equipment": {
+          "type": "object",
+          "title": "7. Meteorological Equipment",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "7_3_shared_equipment": {
+              "enum": {
+                "$ref": "#definitions/enums/yes_no"
+              },
+              "type": "string",
+              "title": "Shared Equipment",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Shared equipment within 10 nautical miles."
+            },
+            "7_4_pitch_roll_heave": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Pitch Roll Heave Equipment",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Pitch, roll, heave equipment."
+            },
+            "7_2_last_calibration_date": {
+              "type": "string",
+              "title": "Last Calibration Date",
+              "control": {
+                "$ref": "#definitions/controls/date"
+              },
+              "description": "Date of last calibration."
+            },
+            "7_1_automated_weather_system": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Automated Weather System",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Automated weather system."
+            }
+          },
+          "description": "Meteorological equipment.",
+          "additionalProperties": false
+        }
+      },
+      "definitions": {
+        "enums": {
+          "yes_no": [
+            "yes",
+            "no"
+          ],
+          "surface": [
+            "green",
+            "grey",
+            "wood",
+            "aluminium",
+            "other",
+            "nil"
+          ],
+          "condition": [
+            "good",
+            "fair",
+            "poor",
+            "nil"
+          ],
+          "pass_fail": [
+            "pass",
+            "fail"
+          ],
+          "pass_fail_nil": [
+            "pass",
+            "fail",
+            "nil"
+          ],
+          "perimeter_net": [
+            "frictape",
+            "sisal",
+            "wiremesh",
+            "other"
+          ],
+          "characteristic": [
+            "high",
+            "medium",
+            "low",
+            "nil"
+          ],
+          "chocks_material": [
+            "sand",
+            "rubber",
+            "wood",
+            "metal",
+            "mixed",
+            "nil"
+          ]
+        },
+        "comment": {
+          "type": "string",
+          "title": "Comment",
+          "pattern": "^[A-Za-z0-9._~()\"!*:@,;+?-]*$",
+          "maxLength": 254,
+          "minLength": 1,
+          "description": "Comment field"
+        },
+        "controls": {
+          "date": {
+            "name": "input",
+            "category": "date"
+          },
+          "radio": {
+            "name": "radio",
+            "category": "string"
+          },
+          "select": {
+            "name": "select",
+            "category": "string"
+          },
+          "checkbox": {
+            "name": "input",
+            "category": "boolean"
+          },
+          "text_input": {
+            "name": "input",
+            "category": "string"
+          },
+          "multiselect": {
+            "name": "select",
+            "category": "array"
+          },
+          "number_input": {
+            "name": "input",
+            "category": "number"
+          },
+          "number_counter": {
+            "name": "counter",
+            "category": "number"
+          }
+        },
+        "compliance": {
+          "enum": [
+            null,
+            "pass",
+            "conditional",
+            "fail",
+            "nil"
+          ],
+          "type": "string",
+          "title": "Compliance",
+          "control": {
+            "name": "traffic",
+            "category": "string"
+          },
+          "default": null
+        }
+      },
+      "description": null,
+      "additionalProperties": false
+    }
+  }
+},
+{
+  "model": "inspections.inspectiontype",
+  "pk": 2,
+  "fields": {
+    "title": "Daily",
+    "updated": "2020-01-23T08:19:44.283Z",
+    "schema": {
+      "title": "Daily Inspection Checklist",
+      "schema": "http://json-schema.org/draft-07/schema#",
+      "properties": {
+        "5_ndb": {
+          "type": "object",
+          "title": "5. NDB",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "5_1_antenna": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Antenna",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check the antenna for damage."
+            },
+            "5_2_operation": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Operation",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Verify NDB is in operation."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "7_lights": {
+          "type": "object",
+          "title": "7. Lights",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "7_1_perimeter": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Perimeter",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check that all lights function."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "4_landing_net": {
+          "type": "object",
+          "title": "4. Landing Net",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "4_2_center": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Center",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check the center cannot be lifted upwards more than 10 inches."
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "4_1_condition": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Condition",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check the condition of the landing net."
+            }
+          },
+          "description": "Landing net (if installed)",
+          "additionalProperties": false
+        },
+        "14_fuel_system": {
+          "type": "object",
+          "title": "14. Fuel System",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "14_1_condition": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Condition",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check for general condition of the fuel system, eg., no leaks."
+            }
+          },
+          "description": "Ref. Helideck Monthly Inspection Checklist",
+          "additionalProperties": false
+        },
+        "15_discrepancies": {
+          "type": "object",
+          "title": "15. Discrepancies",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "15_1_review": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Review",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Review discrepancies reported to OIM, Helicopter Operator notified, and Action List maintained until closed."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "13_vhf_radios_ppe": {
+          "type": "object",
+          "title": "13. VHF Radios & PPE",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "13_3_ppe": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "PPE",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Verify reflective vests, protective eyewear, helmets, etc. are available"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "13_2_portable_condition": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Portable Radio Condition",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check portable VHF radio for proper operation."
+            },
+            "13_1_fixed_base_condition": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Fixed Base Radio Condition",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check fixed base VHF radio for proper operation."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "12_safety_briefing": {
+          "type": "object",
+          "title": "12. Safety Briefing",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "12_1_signs": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Safety Signs",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check Safety Signs."
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "12_2_pax_briefing_video": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Passenger Briefing Video Media",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check passenger briefing video media."
+            },
+            "12_3_media_player_condition": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Media Player Condition",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check media player condition."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "1_helideck_surface": {
+          "type": "object",
+          "title": "1. Helideck Surface",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "1_1_deck_area": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Deck Area",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check deck area for loose objects, birds, and free of oil or fuel spill."
+            },
+            "1_2_cleanliness": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Cleanliness",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Deck is clean."
+            },
+            "1_3_deck_obstacles": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Deck area",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check for raised or loose panels, etc. that could snag landing gear."
+            }
+          },
+          "description": "Reference CAP 437.",
+          "additionalProperties": false
+        },
+        "3_safety_net_shelf": {
+          "type": "object",
+          "title": "3. Safety Net / Shelf",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "3_2_not_elevated": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Not Elevated",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check to ensure no netting is elevated above helideck edge."
+            },
+            "3_1_secure_undamaged": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Secure & Undamaged",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check to ensure netting is secure and not damaged."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "10_passenger_access": {
+          "type": "object",
+          "title": "10. Passenger Access",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "10_1_open": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Open",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Assure passenger access and Emergency Escape access ways are open."
+            },
+            "10_2_signs": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Signs",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Assure signs are in order."
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "9_entrance_barriers": {
+          "type": "object",
+          "title": "9. Entrance Barriers",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "9_1_serviceable": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Serviceable",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Assure plastic chains / barriers, used to control the helideck entrance staircases are not in use, and are serviceable."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "8_adjustable_handrails": {
+          "type": "object",
+          "title": "8. Adjustable Handrails",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "8_1_function": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Perimeter",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check that the collapsible handrails function. If raised handrails are used, lay them down before arrival and departure of helicopters."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "2_drains_tiedown_points": {
+          "type": "object",
+          "title": "2. Drains, Tie Down Points",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "2_1_gutter_drains": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Gutter Drains",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Assure gutter drains are open. Remove any material that may plug the drains."
+            },
+            "2_2_tiedown_points": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Tiedown Points",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Tie-down points remove trapped water if present."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "11_windsock_weather_system": {
+          "type": "object",
+          "title": "11. Windsock & Weather System",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "11_2_windsock_light": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Windsock Light",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check windsock light (if installed)."
+            },
+            "11_1_windsock_condition": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Windsock Condition",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check windsock condition."
+            },
+            "11_3_weather_system_operation": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Weather System Operation",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Check all other weather equipment for proper operation and readings."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        },
+        "6_firefighting_rescue_equipment": {
+          "type": "object",
+          "title": "6. Fire Fighting & Rescue equipment",
+          "properties": {
+            "comment": {
+              "$ref": "#definitions/comment"
+            },
+            "compliance": {
+              "$ref": "#definitions/compliance"
+            },
+            "6_1_operational": {
+              "enum": {
+                "$ref": "#definitions/enums/pass_fail_nil"
+              },
+              "type": "string",
+              "title": "Operational",
+              "control": {
+                "$ref": "#definitions/controls/radio"
+              },
+              "description": "Assure Fire Fighting and Rescue Equipment is ready for operation."
+            }
+          },
+          "description": null,
+          "additionalProperties": false
+        }
+      },
+      "definitions": {
+        "enums": {
+          "yes_no": [
+            "yes",
+            "no"
+          ],
+          "surface": [
+            "green",
+            "grey",
+            "wood",
+            "aluminium",
+            "other",
+            "nil"
+          ],
+          "condition": [
+            "good",
+            "fair",
+            "poor",
+            "nil"
+          ],
+          "pass_fail": [
+            "pass",
+            "fail"
+          ],
+          "pass_fail_nil": [
+            "pass",
+            "fail",
+            "nil"
+          ],
+          "perimeter_net": [
+            "frictape",
+            "sisal",
+            "wiremesh",
+            "other"
+          ],
+          "characteristic": [
+            "high",
+            "medium",
+            "low",
+            "nil"
+          ],
+          "chocks_material": [
+            "sand",
+            "rubber",
+            "wood",
+            "metal",
+            "mixed",
+            "nil"
+          ]
+        },
+        "comment": {
+          "type": "string",
+          "title": "Comment",
+          "pattern": "^[A-Za-z0-9._~()'!*:@,;+?-]*$",
+          "maxLength": 254,
+          "minLength": 1,
+          "description": "Comment field"
+        },
+        "controls": {
+          "date": {
+            "name": "input",
+            "category": "date"
+          },
+          "radio": {
+            "name": "radio",
+            "category": "string"
+          },
+          "select": {
+            "name": "select",
+            "category": "string"
+          },
+          "checkbox": {
+            "name": "input",
+            "category": "boolean"
+          },
+          "text_input": {
+            "name": "input",
+            "category": "string"
+          },
+          "multiselect": {
+            "name": "select",
+            "category": "array"
+          },
+          "number_input": {
+            "name": "input",
+            "category": "number"
+          }
+        },
+        "compliance": {
+          "enum": [
+            null,
+            "pass",
+            "conditional",
+            "fail",
+            "nil"
+          ],
+          "type": "string",
+          "title": "compliance",
+          "control": {
+            "name": "traffic",
+            "category": "string"
+          }
+        }
+      },
+      "description": "HSAC compliant daily inspection checklist.",
+      "additionalProperties": false
+    }
+  }
+}
+]
